@@ -4,19 +4,19 @@ import "./Product.css";
 
 const Product = ({product}) => {
   return (
-    <article className='product'>
-        <Link to={`/producto/${product.id}`}>
+    <article className='article-product'>
+        <Link className='product' to={`/producto/${product.id}`}>
             <div className='product__image'>
                 <img src={product.image}/>
             </div>
             <div className='product__title'>
-                {product.name}
+                {product.title}
             </div>
             <div className='product__description'>
                 {product.description}
                 <div className='product__description-details'>
-                    <span>{product.stock}</span>
-                    <span>{product.price}</span>
+                    <span>{product.stock} stock</span>
+                    <span>{product.price} $</span>
                 </div>
             </div>
         </Link>
