@@ -16,32 +16,30 @@ const Main = () => {
     useEffect(()=>{
         (async()=>{
             const res = await getProducts();
-            setTimeout(()=> {
-                setProducts(res);
-                setLoading(false); 
-            }, 1000);
+            setProducts(res);
+            setLoading(false); 
         })();
     },[]);
+    console.log(products);
 
+    // useEffect(()=>{
+    //     if(order === "menorPrecio"){
+    //         let productosOrder = [...products];
+    //         productosOrder.sort((prod1, prod2)=> prod1.price-prod2.price);
+    //         setProducts(productosOrder);
+    //     }else if(order === "mayorPrecio"){
+    //         let productosOrder = [...products];
+    //         productosOrder.sort((prod1, prod2)=> prod2.price-prod1.price);
+    //         setProducts(productosOrder);
+    //     }
+    // },[order]);
 
-    useEffect(()=>{
-        if(order === "menorPrecio"){
-            let productosOrder = [...products];
-            productosOrder.sort((prod1, prod2)=> prod1.price-prod2.price);
-            setProducts(productosOrder);
-        }else if(order === "mayorPrecio"){
-            let productosOrder = [...products];
-            productosOrder.sort((prod1, prod2)=> prod2.price-prod1.price);
-            setProducts(productosOrder);
-        }
-    },[order]);
-
-    useEffect(()=>{
-        (async()=>{
-            const res = await getProductsFilter(query);
-            setProducts(res)
-        })();
-    },[query]);
+    // useEffect(()=>{
+    //     (async()=>{
+    //         const res = await getProductsFilter(query);
+    //         setProducts(res)
+    //     })();
+    // },[query]);
 
     const changeSearchInput = ({target}) => {
         setQuery(target.value)
