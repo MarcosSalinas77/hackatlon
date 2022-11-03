@@ -1,4 +1,35 @@
 /* //768 */
-.main-product-card__images{
+
+
+.main-product-card{
+    width: 95%; 
     display: flex;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.main-product-title{
+    padding: 15px;
+}
+.main-product-card__image{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+}
+
+.main-product-card__image img{
+    display: flex;
+    width: 100%;
+}
+
+.main-product-card__price{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 15px 5px;
+}
+
+.main-product-card__description{
+    padding: 5px;
 }

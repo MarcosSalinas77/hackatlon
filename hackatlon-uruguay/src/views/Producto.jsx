@@ -1,11 +1,21 @@
 import React from "react";
 import imagenMuestra from "./../assets/imagen-muestra.jpeg";
+import './Producto.css';
+import {useParams} from 'react-router-dom'
 
-const Producto = () => {
+const Producto = (props) => {
+
+    let productId = useParams().id;
+console.log(productId);
+
+
+
   return (
     <section className="main-product-card">
       <article className="">
+        <div className="main-product-title">
         <h2>Título del producto</h2>
+        </div>
         <div className="main-product-card__image">
           <img src={imagenMuestra} />
         </div>
