@@ -8,13 +8,31 @@ header{
     width: 100vw;
     justify-content: space-between;
     padding: 5px 15px;
+    top: 0;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    justify-content: space-between;
+
+}
+
+.header__brand-image-container{
+    height: 50px;
+    width: 100px;
+}
+
+.header__brand-image-container img{
+    width: 100%;
 }
 
 .header__image-container{
     display: none;
 }
 
-header img{
+header__image-container img{
     width: 45px;
     height: 45px;
     cursor: pointer;
