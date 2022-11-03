@@ -7,16 +7,16 @@ const Product = ({product}) => {
     <article className='article-product'>
         <Link className='product' to={`/producto/${product.id}`}>
             <div className='product__image'>
-                <img src={product.image}/>
+                <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg"/>
             </div>
             <div className='product__title'>
-                {product.title}
+                {product.nombreProd}
             </div>
             <div className='product__description'>
-                {product.description.length > 50? `${product.description.substring(0,50)}...`: `${product.description}`}
+                {product.nombreTienda}
                 <div className='product__description-details'>
                     <span>Precio:</span>
-                    <span>{product.price} $</span>
+                    <span>{product.precio} $</span>
                 </div>
             </div>
         </Link>

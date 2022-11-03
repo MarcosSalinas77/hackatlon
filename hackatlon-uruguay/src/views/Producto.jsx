@@ -15,7 +15,7 @@ const Producto = (props) => {
     (async () => {
       try {
         const res = await getProductId(productId);
-        setProduct(res);
+        setProduct(res[0]);
         setLoading(false);
       } catch (err) {
         setProduct(null);
@@ -34,29 +34,27 @@ const Producto = (props) => {
         <section className="main-product-card">
           <article className="">
             <div className="main-product-title">
-              <h2>{product.title}</h2>
+              <h2>{product.nombre}</h2>
             </div>
             <div className="main-product-card__image">
-              <img src={product.image} />
-            </div>
+            <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg"/>            </div>
             <div className="main-product-card__all-content">
               <div className="main-product-card__info">
                 <div className="main-product-title__alternative">
-                  <h2>{product.title}</h2>
+                  <h2>{product.nombre}</h2>
                 </div>
                 <div className="main-product-card__price">
-                  <h3>Precio: ${product.price}</h3>
-                  <h3>Tienda: Amazon</h3>
+                  <h3>Precio: ${product.precio}</h3>
+                  <h3>Tienda: {product.tiendaNombre}</h3>
                 </div>
                 <div className="main-product-card__description">
                   <p>
-                    {product.description}
+                    {product.tiendaNombre}
                   </p>
                 </div>
               </div>
               <div className="main-product-card__image-alternative">
-                <img src={product.image} />
-              </div>
+              <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg"/>              </div>
             </div>
           </article>
         </section>

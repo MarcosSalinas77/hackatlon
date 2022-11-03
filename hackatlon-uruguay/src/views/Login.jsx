@@ -25,7 +25,10 @@ const navigate = useNavigate()
       //   localStorage.setItem('user', email)
       //  navigate("/")
       const resp = await getUser(email,pass);
-
+      if(resp.success){
+        localStorage.setItem("user", JSON.stringify(resp.user));
+        navigate("/");
+      }
       console.log(resp)
     }
   };
