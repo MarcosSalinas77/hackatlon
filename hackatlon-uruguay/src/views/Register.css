@@ -1,7 +1,12 @@
-.login-container{
+.register-container{
     width: 90%;
     margin: auto;
     justify-content: space-between;
     margin-top: 72px;
     padding-top: 20px;
+}
+
+.link-container{
+    width: 100%;
+    text-align: center;
 }
