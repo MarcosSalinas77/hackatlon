@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from './views/Home';
+import AppRouter from './AppRouter';
+import Home from './views/Home'
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <AppRouter>
+      <Home/>
+    </AppRouter>
   );
 }
 
