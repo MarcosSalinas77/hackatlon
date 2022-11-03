@@ -64,6 +64,7 @@ const Producto = (props) => {
               <div className="main-product-card__image-alternative">
               <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg"/>              </div>
             </div>
+            <a href={product.id_short}>{product.id_short}</a>
           </article>
         </section>
       ): <div className="main-product-card" style={{border:"none"}}>No existe el producto</div>}

@@ -271,12 +271,7 @@ export async function getProducts() {
     }
 }
 
-// export async function getProductsFilter(filter) {
-//     let stringSearch = filter.toLocaleLowerCase()
-//     return allProducts.filter((prod) => {
-//         return (prod.title.toLocaleLowerCase().includes(stringSearch))
-//     })
-// }
+
 export async function getProductId(id) {
     try{
         const res = await fetch(`http://localhost:8080/productos/${id}`);
