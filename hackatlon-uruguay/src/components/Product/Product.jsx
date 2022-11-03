@@ -15,7 +15,7 @@ const Product = ({product}) => {
             <div className='product__description'>
                 {product.description.length > 50? `${product.description.substring(0,50)}...`: `${product.description}`}
                 <div className='product__description-details'>
-                    <span>{product.stock} stock</span>
+                    <span>Precio:</span>
                     <span>{product.price} $</span>
                 </div>
             </div>
