@@ -257,18 +257,38 @@ const allProducts = [
 ]
 
 
-export function getProducts() {
+export async function getProducts() {
     return allProducts;
 }
 
-export function getProductsFilter(filter) {
+export async function getProductsFilter(filter) {
     let stringSearch = filter.toLocaleLowerCase()
     return allProducts.filter((prod) => {
         return (prod.title.toLocaleLowerCase().includes(stringSearch))
     })
 }
-export function getProductId(id) {
+export async function getProductId(id) {
     return allProducts.find((prod) => {
         return prod.id == id;
     });
+}
+
+export async function getUser(email,pass){
+    try{
+        const res = await fetch("http://localhost:8080/users/login", 
+        {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email,
+                password: pass
+            })
+        });
+        const resJSON = res.json();
+        return resJSON;
+    }catch(err){
+        console.log(err)
+    }
 }

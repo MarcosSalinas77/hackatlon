@@ -5,6 +5,7 @@ import HeaderLogin from "../components/HeaderLogin/HeaderLogin";
 import { useRef } from "react";
 import {ToastContainer, toast} from 'react-toastify'
 import { Navigate, useHref, useNavigate } from "react-router-dom";
+import { getUser } from "../utils/apiConfig";
 
 
 const Login = () => {
@@ -12,7 +13,8 @@ const Login = () => {
 const loginPassTxt = useRef();
 const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const email = loginEmailTxt.current.value;
     const pass = loginPassTxt.current.value;
@@ -20,8 +22,11 @@ const navigate = useNavigate()
     if(email ==="" || pass ===""){
         toast("No puede haber campos vacíos");
     }else{
-        localStorage.setItem('user', email)
-       navigate("/")
+      //   localStorage.setItem('user', email)
+      //  navigate("/")
+      const resp = await getUser(email,pass);
+
+      console.log(resp)
     }
   };
 
