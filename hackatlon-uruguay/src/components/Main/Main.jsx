@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import ListProducts from '../ListProducts/ListProducts';
 import { getProducts, getProductsFilter } from '../../utils/apiConfig';
 import FilterOptions from '../FilterOptions/FilterOptions';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
+import "./Main.css";
 
 const Main = () => {
     const [products, setProducts] = useState([]);
@@ -41,15 +42,15 @@ const Main = () => {
         })();
     },[query]);
 
-    const cambio = ({target}) => {
+    const changeSearchInput = ({target}) => {
         setQuery(target.value)
     }
 
 
     return (
         <main>
-            <Header/>
-            <section>
+            <Header changeSearchInput={changeSearchInput}/>
+            <section className='section-products'>
 
                 {loading? 
                     <div className='loading'>Cargando...</div>
@@ -57,8 +58,6 @@ const Main = () => {
                     <>
                         <FilterOptions order={order} setOrder={setOrder}/>
                         <ListProducts products={products} />
-                        <input onChange={(e)=> cambio(e)} ref={inputRef} type="text" />
-                        <button>Click para filtrar</button>
                     </>
                 : <div>No hay Productos</div>
                 }
