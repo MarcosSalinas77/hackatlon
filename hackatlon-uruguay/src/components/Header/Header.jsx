@@ -8,11 +8,11 @@ import {Link, Links} from 'react-router-dom'
 const Header = () => {
   return (
     <header>
-      
-        <div className="header__brand-image-container">
+      <div className="header-content">
+      <div className="header__brand-image-container">
           <img
-            src={menuImage}
-            alt="Menú hamburguesa"
+            src={logoCenco}
+            alt="Logo cencosud"
             className="header__hamburguer-menu-img"
           />
         </div>
@@ -38,6 +38,7 @@ const Header = () => {
             {/* <Link ><li>Listado de products</li></Link> */}
           </ul>
         </nav>
+      </div>
     </header>
   );
 };
