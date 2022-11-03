@@ -82,4 +82,8 @@ header__image-container img{
     .header__image-container{
         display: flex;
     }
+
+    .header__brand-image-container{
+        display: none;
+    }
 }
