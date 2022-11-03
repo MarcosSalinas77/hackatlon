@@ -50,6 +50,11 @@
   display: none;
 }
 
+
+.main-product-title__alternative h2, .main-product-title h2{
+  padding-top: 5px;
+}
+
 @media (min-width: 1100px) {
   .main-product-card {
     flex-direction: column;

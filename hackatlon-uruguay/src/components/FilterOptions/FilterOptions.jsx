@@ -1,4 +1,5 @@
-import React from "react";
+import Form from 'react-bootstrap/Form';
+import './FilterOptions.css'
 
 const FilterOptions = ({order, setOrder}) => {
   const options = [
@@ -10,9 +11,9 @@ const FilterOptions = ({order, setOrder}) => {
     setOrder(target.value);
   }
   return (
-    <select value={order} onChange={handleOrder}>
-      {options.map((opt, index)=> <option value={opt.value} key={index}>{opt.text}</option>)}
-    </select>
+    <Form.Select value={order} onChange={handleOrder} className="filterSelect">
+        {options.map((opt, index)=> <option value={opt.value} key={index}>{opt.text}</option>)}
+    </Form.Select>
   );
 };
 

@@ -10,11 +10,13 @@ const Header = ({ changeSearchInput }) => {
     <header>
       <div className="header-content">
         <div className="header__brand-image-container">
+          <Link to="/">
           <img
             src={logoCenco}
             alt="Logo cencosud"
             className="header__hamburguer-menu-img"
           />
+          </Link>
         </div>
 
         <div className="header__image-container">
