@@ -5,7 +5,7 @@ import "./Product.css";
 const Product = ({product}) => {
   return (
     <article className='product'>
-        {/* <Link to={`/producto/${product.id}`}> */}
+        <Link to={`/producto/${product.id}`}>
             <div className='product__image'>
                 <img src={product.image}/>
             </div>
@@ -19,7 +19,7 @@ const Product = ({product}) => {
                     <span>{product.price}</span>
                 </div>
             </div>
-        {/* </Link> */}
+        </Link>
     </article>
   )
 }
