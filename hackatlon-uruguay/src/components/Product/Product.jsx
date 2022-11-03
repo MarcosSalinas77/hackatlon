@@ -10,7 +10,9 @@ const Product = ({product}) => {
                 <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg"/>
             </div>
             <div className='product__title'>
+
                 {product.nombreProd}
+
             </div>
             <div className='product__description'>
                 {product.nombreTienda}

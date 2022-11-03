@@ -36,7 +36,7 @@ const navigate = useNavigate()
 
   return (
     <>
-      <HeaderLogin/>
+      <HeaderLogin route="/registro" name="Registro"/>
     <div className="login-container">
       
         <Form>
@@ -50,7 +50,7 @@ const navigate = useNavigate()
             <Form.Control type="password" placeholder="Password" ref={loginPassTxt}/>
           </Form.Group>
           <Button type="submit" onClick={handleSubmit}>
-            Registrarme
+            Iniciar sesión
           </Button>
         </Form>
 

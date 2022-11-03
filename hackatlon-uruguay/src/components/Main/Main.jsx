@@ -4,6 +4,7 @@ import { getProducts, getProductsFilter } from '../../utils/apiConfig';
 import FilterOptions from '../FilterOptions/FilterOptions';
 import Header from '../Header/Header';
 import "./Main.css";
+import Loading from '../Loading/Loading';
 
 const Main = () => {
     const [products, setProducts] = useState([]);
@@ -51,7 +52,8 @@ const Main = () => {
             <section className='section-products'>
 
                 {loading? 
-                    <div className='loading'>Cargando...</div>
+                    <Loading/>
+                    //<div className='loading'>Cargando...</div>
                 : products.length > 0 ? 
                     <>
                         <FilterOptions order={order} setOrder={setOrder}/>
@@ -60,6 +62,9 @@ const Main = () => {
                 : <div>No hay Productos</div>
                 }
             </section>
+
+
+            
         </main>
     )
 }

@@ -5,6 +5,7 @@ import {ToastContainer, toast} from 'react-toastify'
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import HeaderLogin from "../components/HeaderLogin/HeaderLogin";
+import { addUser } from "../utils/apiConfig";
 
 
 const Register = () => {
@@ -24,7 +25,13 @@ const passTxt = useRef();
     if(nombre === "" || apellido==="" || email ==="" || pass ===""){
         toast("No puede haber campos vacíos");
     }else{
-        toast("Registro exitoso! Ya puedes iniciar sesión");
+      addUser(nombre, apellido, email, pass).then(data => {
+        if(data.msg == "User created successfully"){
+          toast("Registro exitoso! Ya puedes iniciar sesión");
+        }else{
+          toast("Hubo un error con el registro. Intente nuevamente");
+        }
+      });
     }
   };
 
@@ -33,7 +40,7 @@ const passTxt = useRef();
   return (
     <>
         
-        <HeaderLogin/>
+        <HeaderLogin route="/login" name="Iniciar sesión"/>
     <div className="register-container">
       <Form>
         <Form.Group className="mb-3" >
