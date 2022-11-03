@@ -1,8 +1,9 @@
 header{
     height: 72px;
     position: fixed;
-    background-color: var(--verde-claro);
-    opacity: .9;
+    background-color: var(--celeste);
+    color: var(--azul-oscuro);
+    opacity: .95;
     display: flex;
     align-items: center;
     width: 100vw;
@@ -14,7 +15,7 @@ header{
 .header-content{
     display: flex;
     align-items: center;
-    width: 95%;
+    width: 100%;
     justify-content: space-between;
 
 }
@@ -45,24 +46,28 @@ header__image-container img{
 
 .header__input-search input{
     width: 100%;
-    height: 35px;
+    height: 41px;
+    padding: 10px;
     border: none;
-    background-color: var(--mar);
+    color: var(--celeste);
+    background-color: var(--azul-oscuro);
     border-radius: 15px;
 }
+.header__input-search input::placeholder{
+    color: var(--celeste);
+}
 
-.list-items ul{
+
+.list-items{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 194px;
+}
+.list-items a{
+    color: var(--azul-oscuro);
 }
 
-.list-items ul li{
-    display: flex;
-    direction: none;
-}
-
-.list-items ul li:first-of-type{
-    padding-right: 15px;
-}
 
 @media (max-width: 768px){
     .list-items{

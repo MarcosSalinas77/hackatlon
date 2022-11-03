@@ -1,13 +1,15 @@
 /* //768 */
 
 .main-product-card {
-  width: 95%;
+  width: 80%;
   display: flex;
   justify-content: center;
-  border: solid 1px var(--mar);
+  border: 2px solid var(--azul-oscuro);
   border-radius: 15px;
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.446);
+  margin: 100px auto 0;
+}
+.main-product-card > article {
+  width: 100%;
 }
 
 .main-product-title__alternative {
@@ -58,13 +60,13 @@
   }
 
   .main-product-card__image-alternative {
-    display: flex;
+    display: inline-block;
     width: 100%;
   }
 
   .main-product-card__image-alternative img{
     border-radius: 15px;
-    /* width: 100%; */
+    width: 100%;
   }
 
   .main-product-card__all-content {

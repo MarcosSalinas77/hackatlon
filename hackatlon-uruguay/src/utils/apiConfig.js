@@ -267,3 +267,8 @@ export function getProductsFilter(filter) {
         return (prod.title.toLocaleLowerCase().includes(stringSearch))
     })
 }
+export function getProductId(id) {
+    return allProducts.find((prod) => {
+        return prod.id == id;
+    });
+}
