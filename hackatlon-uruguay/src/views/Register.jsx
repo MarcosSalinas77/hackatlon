@@ -33,7 +33,7 @@ const passTxt = useRef();
   return (
     <>
         
-        <HeaderLogin/>
+        <HeaderLogin route="/login" name="Iniciar sesión"/>
     <div className="register-container">
       <Form>
         <Form.Group className="mb-3" >

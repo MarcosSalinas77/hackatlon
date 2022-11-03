@@ -38,7 +38,7 @@ const Header = ({ changeSearchInput }) => {
             Inciar sesión
           </Link>
           /
-          <Link to="/register">
+          <Link to="/registro">
             Registrarse
           </Link>
           {/* <Link ><li>Listado de products</li></Link> */}
