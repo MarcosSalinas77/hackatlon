@@ -5,7 +5,7 @@ import logoCenco from "./../../assets/logoCenco.png";
 import "./Header.css";
 import {Link, Links} from 'react-router-dom'
 
-const Header = () => {
+const Header = ({changeSearchInput}) => {
   return (
     <header>
       <div className="header-content">
@@ -28,6 +28,7 @@ const Header = () => {
         <div className="header__input-search">
           <input
             type="text"
+            onChange={(e)=>changeSearchInput(e)}
             placeholder="Buscar productos..."
           />
         </div>
