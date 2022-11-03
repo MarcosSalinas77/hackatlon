@@ -23,23 +23,24 @@
 .product:hover{
     box-shadow: 0px 0px 10px 5px var(--verde-blanco);
 }
-
+/* 
 .product > a{
     display: flex;
 
     color: #000;
     font-weight: 500;
-}
+} */
 
 .product__image{
     width: 100%;
-    height: 70%;
+    height: 55%;
     border-bottom: 1px solid black;
 }
 
 .product__image img{
-    width: 100%;
     height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 .product div:not(:first-child){
     padding: 10px;

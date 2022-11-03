@@ -3,13 +3,13 @@ import menuImage from "./../../assets/menu.svg";
 import logoCenco from "./../../assets/logoCenco.png";
 
 import "./Header.css";
-import {Link, Links} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const Header = ({changeSearchInput}) => {
+const Header = ({ changeSearchInput }) => {
   return (
     <header>
       <div className="header-content">
-      <div className="header__brand-image-container">
+        <div className="header__brand-image-container">
           <img
             src={logoCenco}
             alt="Logo cencosud"
@@ -28,16 +28,20 @@ const Header = ({changeSearchInput}) => {
         <div className="header__input-search">
           <input
             type="text"
-            onChange={(e)=>changeSearchInput(e)}
+            onChange={(e) => changeSearchInput(e)}
             placeholder="Buscar productos..."
           />
         </div>
 
         <nav className="list-items">
-          <ul>
-            <Link to="/login"><li>Inciar sesión</li></Link>
-            {/* <Link ><li>Listado de products</li></Link> */}
-          </ul>
+          <Link to="/login">
+            Inciar sesión
+          </Link>
+          /
+          <Link to="/register">
+            Registrarse
+          </Link>
+          {/* <Link ><li>Listado de products</li></Link> */}
         </nav>
       </div>
     </header>

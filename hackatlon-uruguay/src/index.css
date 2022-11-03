@@ -4,6 +4,14 @@
   --verde-blanco: #9EF8EE;
   --naranja: #FA7F08;
   --rojo: #F24405;
+  --azul: #2759A0;
+  --azul-oscuro:#0C2A54;
+  --azul-claro:#5192ED;
+  --mar2: #21A5AD;
+  --canela: #A17727;
+  --amarillo:#EDD121;
+  --verde: #83A116;
+  --celeste:#80AEED;
 }
 *{
   margin: 0;
@@ -26,7 +34,7 @@ code {
 }
 
 a{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 
