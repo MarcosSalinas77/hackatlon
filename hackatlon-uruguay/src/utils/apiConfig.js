@@ -292,3 +292,29 @@ export async function getUser(email,pass){
         console.log(err)
     }
 }
+
+
+
+export async function addUser(name, lastName, email,pass){
+    try{
+        const res = await fetch("http://localhost:8080/usuarios/", 
+        {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: name,
+                apellido: lastName,
+                email,
+                pass,
+
+            })
+        });
+        const resJSON = res.json();
+        console.log(resJSON);
+        return resJSON;
+    }catch(err){
+        console.log(err)
+    }
+}

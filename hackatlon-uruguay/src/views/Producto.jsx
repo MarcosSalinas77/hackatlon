@@ -4,6 +4,8 @@ import "./Producto.css";
 import { useParams } from "react-router-dom";
 import { getProductId } from "../utils/apiConfig";
 import Header from "../components/Header/Header";
+import imageArrow from "./../assets/left-arrow.png";
+import { Link } from "react-router-dom";
 
 const Producto = (props) => {
   let productId = useParams().id;
@@ -34,7 +36,8 @@ const Producto = (props) => {
         <section className="main-product-card">
           <article className="">
             <div className="main-product-title">
-              <h2>{product.title}</h2>
+              <Link to="/"><img src={imageArrow}/></Link>
+              <h2> {product.title}</h2>
             </div>
             <div className="main-product-card__image">
               <img src={product.image} />
@@ -42,6 +45,7 @@ const Producto = (props) => {
             <div className="main-product-card__all-content">
               <div className="main-product-card__info">
                 <div className="main-product-title__alternative">
+                <Link to="/"><img src={imageArrow}/></Link>
                   <h2>{product.title}</h2>
                 </div>
                 <div className="main-product-card__price">

@@ -10,7 +10,7 @@ const Product = ({product}) => {
                 <img src={product.image}/>
             </div>
             <div className='product__title'>
-                {product.title}
+                Ir a inicio - {product.title}
             </div>
             <div className='product__description'>
                 {product.description.length > 50? `${product.description.substring(0,50)}...`: `${product.description}`}
