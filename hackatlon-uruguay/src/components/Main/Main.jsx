@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ListProducts from '../ListProducts/ListProducts';
 import { getProducts } from '../../utils/apiConfig';
 import FilterOptions from '../FilterOptions/FilterOptions';
+import Header from '../Header/Header'
 
 const Main = () => {
     const [products, setProducts] = useState([]);
@@ -18,6 +19,7 @@ const Main = () => {
     },[]);
     return (
         <main>
+            <Header/>
             <section>
 
                 {loading? 
